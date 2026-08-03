@@ -1,3 +1,4 @@
+// External destinations used by the conference registration actions.
 const registrationForm = "https://forms.gle/pWB5ZqfUeD6SRSXW8";
 const paypal = "https://www.paypal.com/ncp/payment/A7HGUAZ97UVQS";
 
