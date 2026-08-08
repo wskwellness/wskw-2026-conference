@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import AnnouncementBanner from "./components/AnnouncementBanner";
 
 export const metadata: Metadata = {
   title: "2026 WSKW Conference | Connected in Motion",
@@ -10,11 +11,14 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body>
+        <AnnouncementBanner />
         <header className="site-header">
           <a className="brand" href="/">WSKW <span>2026 Conference</span></a>
           <nav aria-label="Conference navigation">
             <a href="/#registration">Registration</a>
             <a href="/#hotel">Hotel</a>
+            <a href="/#travel">Travel</a>
+            <a href="/#know">Before You Go</a>
           </nav>
           <a className="back-to-wskw" href="https://wskw.org" target="_blank" rel="noreferrer">
             Back to WSKW.org ↗
