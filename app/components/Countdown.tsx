@@ -2,15 +2,15 @@
 
 import { useEffect, useState } from "react";
 
-// Conference opens the morning of Sept 29, 2026. Boise is Mountain Time,
+// Conference opens the morning of Sept 30, 2026. Boise is Mountain Time,
 // which is MDT (UTC-6) in late September.
-const TARGET = new Date("2026-09-29T08:00:00-06:00").getTime();
+const TARGET = new Date("2026-09-30T08:00:00-06:00").getTime();
 
 // Google Calendar template link (all-day, end date is exclusive → Oct 3).
 const GCAL =
   "https://calendar.google.com/calendar/render?action=TEMPLATE" +
   "&text=" + encodeURIComponent("2026 WSKW Conference — Connected in Motion") +
-  "&dates=20260929/20261003" +
+  "&dates=20260930/20261003" +
   "&location=" + encodeURIComponent("Boise State University, Boise, ID") +
   "&details=" + encodeURIComponent(
     "2026 Annual Conference of the Western Society for Kinesiology & Wellness, in collaboration with SHAPE Idaho. https://wskw.org",
