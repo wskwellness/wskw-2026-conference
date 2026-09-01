@@ -1,10 +1,24 @@
 import Countdown from "./components/Countdown";
 
+// Render on every request (not statically at build time) so the PayPal link
+// below is resolved against the real current time — see currentPaypal().
+export const dynamic = "force-dynamic";
+
 // External destinations used by the conference registration actions.
 const registrationForm = "https://forms.gle/pWB5ZqfUeD6SRSXW8";
-const paypal = "https://www.paypal.com/ncp/payment/A7HGUAZ97UVQS";
+
+// The registration PayPal link changes at midnight Pacific on 2026-09-02.
+// Resolve it per request so the switch happens automatically at that instant,
+// with no scheduled task or manual redeploy needed.
+const PAYPAL_OLD = "https://www.paypal.com/ncp/payment/A7HGUAZ97UVQS";
+const PAYPAL_NEW = "https://www.paypal.com/ncp/payment/Q2GESRQKJXZTQ";
+const PAYPAL_SWITCH_AT = Date.parse("2026-09-02T00:00:00-07:00"); // 00:00 PDT
+function currentPaypal() {
+  return Date.now() >= PAYPAL_SWITCH_AT ? PAYPAL_NEW : PAYPAL_OLD;
+}
 
 export default function Home() {
+  const paypal = currentPaypal();
   return <>
     <section className="hero"><div className="hero-inner">
       <img className="logo" src="https://wskw.org/wp-content/uploads/2026/02/2026-conf-logo.png" alt="WSKW and SHAPE Idaho 2026 Conference" />
