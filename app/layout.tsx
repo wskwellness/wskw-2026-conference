@@ -15,6 +15,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <header className="site-header">
           <a className="brand" href="/">WSKW <span>2026 Conference</span></a>
           <nav aria-label="Conference navigation">
+            <a href="/#program">Program</a>
             <a href="/#speakers">Speakers</a>
             <a href="/#registration">Registration</a>
             <a href="/#hotel">Hotel</a>
