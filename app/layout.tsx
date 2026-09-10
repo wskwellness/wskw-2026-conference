@@ -19,6 +19,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <a href="/#registration">Registration</a>
             <a href="/#hotel">Hotel</a>
             <a href="/#travel">Travel</a>
+            <a href="/#venue">Venue</a>
             <a href="/#know">Before You Go</a>
           </nav>
           <a className="back-to-wskw" href="https://wskw.org" target="_blank" rel="noreferrer">
