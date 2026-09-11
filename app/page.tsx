@@ -71,8 +71,8 @@ export default async function Home() {
             <p className="eyebrow" style={{color:"#1265b0"}}>Now Available</p>
             <h3 className="program-heading">The 2026 program is ready</h3>
             <p>Browse the complete schedule for September 30 &ndash; October 2, including the keynote, the E.C. Davis Lecture, the Broten Young Scholar Lecture, and all concurrent sessions and poster presentations.</p>
-            <p className="program-meta">{updated ? <>Updated {updated} &middot; </> : null}PDF, opens in Google Drive</p>
-            <a className="button primary" href="/program">Open the program</a>
+            <p className="program-meta">{updated ? <>Updated {updated} &middot; </> : null}PDF, opens in Google Drive in a new tab</p>
+            <a className="button primary" href="/program" target="_blank" rel="noreferrer">Open the program</a>
           </div>
           <aside className="program-note">
             <p><strong>Always check here for the latest version.</strong></p>
